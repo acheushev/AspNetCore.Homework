@@ -5,7 +5,9 @@
 }
 
 <h2>Products</h2>
-<table>
+<a class="btn btn-default" asp-action="Create" >Create new product</a>
+<br/><br />
+<table class="table-bordered">
     @{
         <tr>
             <th>Product Id</th>
@@ -20,19 +22,20 @@
         </tr>
         foreach (var product in Model)
         {
-    <tr>
-        <td>@product.ProductId</td>
-        <td>@product.ProductName</td>
-        <td>@product.Discontinued</td>
-        <td>@product.QuantityPerUnit</td>
-        <td>@product.ReorderLevel</td>
-        <td>@product.UnitPrice</td>
-        <td>@product.UnitsOnOrder</td>
-        <td>@product.Supplier?.CompanyName</td>
-        <td>@product.Category?.CategoryName</td>
+        <tr>
+            <td>@product.ProductId</td>
+            <td>@product.ProductName</td>
+            <td>@product.Discontinued</td>
+            <td>@product.QuantityPerUnit</td>
+            <td>@product.ReorderLevel</td>
+            <td>@product.UnitPrice</td>
+            <td>@product.UnitsOnOrder</td>
+            <td>@product.Supplier?.CompanyName</td>
+            <td>@product.Category?.CategoryName</td>
+            <td><a class="btn btn-default" asp-action="Edit" asp-route-id="@product.ProductId" >Edit</a></td>
 
 
-    </tr>
+        </tr>
         }
     }
 </table>

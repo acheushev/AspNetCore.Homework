@@ -5,48 +5,77 @@
 }
 
 <h2>Edit Product</h2>
-<form method="post">
-    <input type="hidden" asp-for="ProductId" value="@Model.ProductId" />
-    <div>
-        <label asp-for="ProductName"></label>
-        <input asp-for="ProductName" value="@Model.ProductName" />
-        <span asp-validation-for="ProductName"></span>
-    </div>
-    <div>
-        <label asp-for="Discontinued"></label>
-        <input type="checkbox" asp-for="Discontinued" checked="@Model.Discontinued" />
-        <span asp-validation-for="Discontinued"></span>
-    </div>
-    <div>
-        <label asp-for="QuantityPerUnit"></label>
-        <input asp-for="QuantityPerUnit" value="@Model.QuantityPerUnit" />
-        <span asp-validation-for="QuantityPerUnit"></span>
-    </div>
-    <div>
-        <label asp-for="ReorderLevel"></label>
-        <input asp-for="ReorderLevel" value="@Model.ReorderLevel" />
-        <span asp-validation-for="ReorderLevel"></span>
-    </div>
-    <div>
-        <label asp-for="UnitPrice"></label>
-        <input asp-for="UnitPrice" value="@Model.UnitPrice" />
-        <span asp-validation-for="UnitPrice"></span>
-    </div>
-    <div>
-        <label asp-for="UnitsOnOrder"></label>
-        <input asp-for="UnitsOnOrder" value="@Model.UnitsOnOrder" />
-        <span asp-validation-for="UnitsOnOrder"></span>
-    </div>
+<div>
+    <form class="form-horizontal" method="post">
+        <input type="hidden" asp-for="ProductId" value="@Model.ProductId" />
+        <div class="form-group">
+            <label class="control-label col-sm-2" asp-for="ProductName"></label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="ProductName" value="@Model.ProductName" />
+                <span asp-validation-for="ProductName"></span>
+            </div>
+        </div>
+        <div class="form-group" >
+            <label class="control-label col-sm-2" asp-for="Discontinued"></label>
 
-    <select asp-for="CategoryId"
-            asp-items="@(new SelectList(Model.AllCategories,"Id","Name"))">
-    </select>
-    
-    <select asp-for="SupplierId"
-            asp-items="@(new SelectList(Model.AllSuppliers,"SupplierId","SupplierName"))">
-    </select>
+            <input  type="checkbox" asp-for="Discontinued" checked="@Model.Discontinued" />
+            <span asp-validation-for="Discontinued"></span>
 
-    <input type="submit" name="save" value="Save" />
-    
-</form>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" asp-for="QuantityPerUnit"></label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="QuantityPerUnit" value="@Model.QuantityPerUnit" />
+                <span asp-validation-for="QuantityPerUnit"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" asp-for="ReorderLevel"></label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="ReorderLevel" value="@Model.ReorderLevel" />
+                <span asp-validation-for="ReorderLevel"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" asp-for="UnitPrice"></label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="UnitPrice" value="@Model.UnitPrice" />
+                <span asp-validation-for="UnitPrice"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" asp-for="UnitsOnOrder"></label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="UnitsOnOrder" value="@Model.UnitsOnOrder" />
+                <span asp-validation-for="UnitsOnOrder"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" asp-for="UnitsInStock"></label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="UnitsInStock" value="@Model.UnitsInStock" />
+                <span asp-validation-for="UnitsInStock"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Supplier</label>
 
+            <div class="col-sm-10">
+                <select class="form-control" asp-for="SupplierId"
+                        asp-items="@(new SelectList(Model.AllSuppliers,"SupplierId","SupplierName"))"></select>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Category</label>
+            <div class="col-sm-10">
+                <select class="form-control" asp-for="CategoryId"
+                        asp-items="@(new SelectList(Model.AllCategories,"Id","Name"))"></select>
+            </div>
+        </div>
+
+
+        <input type="submit" name="save" value="Save" />
+
+    </form>
+</div>

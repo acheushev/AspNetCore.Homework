@@ -13,18 +13,23 @@ namespace AspNetCore.Homework.Models
         [MinLength(5)]
         public string ProductName { get; set; }
 
-        [Required] public int? SupplierId { get; set; }
+        [Required]
+        public int? SupplierId { get; set; }
 
-        [Required] public int? CategoryId { get; set; }
-
+        [Required]
+        public int? CategoryId { get; set; }
+        [Required]
         public string QuantityPerUnit { get; set; }
 
         [DataType(DataType.Currency)]
         [Range(0, 9999999.99)]
+        [Required]
         public decimal? UnitPrice { get; set; }
-
+        [Required]
         public short? UnitsInStock { get; set; }
+        [Required]
         public short? UnitsOnOrder { get; set; }
+        [Required]
         public short? ReorderLevel { get; set; }
 
         public bool Discontinued { get; set; }
