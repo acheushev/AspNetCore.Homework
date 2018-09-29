@@ -1,0 +1,350 @@
+2018-09-29T15:46:22.4282330+03:00  [INF] Application folder:D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\wwwroot (a1738332)
+2018-09-29T15:46:22.4468822+03:00  [INF] Configuration value of M:30 (b5078418)
+2018-09-29T15:46:22.4469167+03:00  [INF] Connection string:Server=(local);Database=Northwind;Trusted_Connection=True; (66ad781e)
+2018-09-29T15:46:22.7203311+03:00 0HLH6167QME54:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44323/   (ca22a1cb)
+2018-09-29T15:46:22.8031771+03:00 0HLH6167QME54:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:46:22.8135354+03:00 0HLH6167QME54:00000001 [INF] Executing action method "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)" - Validation state: Valid (dad538d7)
+2018-09-29T15:46:22.8170014+03:00 0HLH6167QME54:00000001 [INF] Executed action method "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.3425ms. (50a9e262)
+2018-09-29T15:46:22.8359517+03:00 0HLH6167QME54:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2018-09-29T15:46:22.9296544+03:00 0HLH6167QME54:00000001 [INF] Executed ViewResult - view "Index" executed in 103.9737ms. (f66409e9)
+2018-09-29T15:46:22.9299173+03:00 0HLH6167QME54:00000001 [INF] Executed action "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)" in 126.5807ms (afa2e885)
+2018-09-29T15:46:22.9375628+03:00 0HLH6167QME54:00000001 [INF] Request finished in 219.9683ms 200 text/html; charset=utf-8 (791a596a)
+2018-09-29T15:46:27.5937771+03:00 0HLH6167QME55:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44323/Products   (ca22a1cb)
+2018-09-29T15:46:27.5955351+03:00 0HLH6167QME55:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Products\"}". Executing action "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:46:27.6563306+03:00 0HLH6167QME55:00000001 [INF] Executing action method "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)" - Validation state: Valid (dad538d7)
+2018-09-29T15:46:27.8633556+03:00 0HLH6167QME55:00000001 [INF] Entity Framework Core "2.1.3-rtm-32065" initialized '"NorthwindContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-09-29T15:46:27.8652438+03:00 0HLH6167QME55:00000001 [INF] Executed action method "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 208.7106ms. (50a9e262)
+2018-09-29T15:46:27.8676250+03:00 0HLH6167QME55:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2018-09-29T15:46:28.0300241+03:00 0HLH6167QME55:00000001 [INF] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [prod].[ProductID], [prod].[CategoryID], [prod].[Discontinued], [prod].[ProductName], [prod].[QuantityPerUnit], [prod].[ReorderLevel], [prod].[SupplierID], [prod].[UnitPrice], [prod].[UnitsInStock], [prod].[UnitsOnOrder], [prod.Supplier].[SupplierID], [prod.Supplier].[Address], [prod.Supplier].[City], [prod.Supplier].[CompanyName], [prod.Supplier].[ContactName], [prod.Supplier].[ContactTitle], [prod.Supplier].[Country], [prod.Supplier].[Fax], [prod.Supplier].[HomePage], [prod.Supplier].[Phone], [prod.Supplier].[PostalCode], [prod.Supplier].[Region], [prod.Category].[CategoryID], [prod.Category].[CategoryName], [prod.Category].[Description], [prod.Category].[Picture]
+FROM [Products] AS [prod]
+LEFT JOIN [Suppliers] AS [prod.Supplier] ON [prod].[SupplierID] = [prod.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [prod.Category] ON [prod].[CategoryID] = [prod.Category].[CategoryID]" (0723d8ff)
+2018-09-29T15:46:28.1146856+03:00 0HLH6167QME55:00000001 [INF] Executed ViewResult - view "Index" executed in 249.1432ms. (f66409e9)
+2018-09-29T15:46:28.1148646+03:00 0HLH6167QME55:00000001 [INF] Executed action "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)" in 519.2668ms (afa2e885)
+2018-09-29T15:46:28.1155058+03:00 0HLH6167QME55:00000001 [INF] Request finished in 521.7568ms 200 text/html; charset=utf-8 (791a596a)
+2018-09-29T15:46:29.8748035+03:00 0HLH6167QME55:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44323/Products/Edit/3   (ca22a1cb)
+2018-09-29T15:46:29.8867914+03:00 0HLH6167QME55:00000002 [INF] Route matched with "{action = \"Edit\", controller = \"Products\"}". Executing action "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:46:29.9057825+03:00 0HLH6167QME55:00000002 [INF] Executing action method "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" with arguments (["3"]) - Validation state: Valid (4e3479ed)
+2018-09-29T15:46:29.9075342+03:00 0HLH6167QME55:00000002 [INF] Entity Framework Core "2.1.3-rtm-32065" initialized '"NorthwindContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-09-29T15:46:29.9210289+03:00 0HLH6167QME55:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[ProductID], [e].[CategoryID], [e].[Discontinued], [e].[ProductName], [e].[QuantityPerUnit], [e].[ReorderLevel], [e].[SupplierID], [e].[UnitPrice], [e].[UnitsInStock], [e].[UnitsOnOrder]
+FROM [Products] AS [e]
+WHERE [e].[ProductID] = @__get_Item_0" (0723d8ff)
+2018-09-29T15:46:29.9306529+03:00 0HLH6167QME55:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]" (0723d8ff)
+2018-09-29T15:46:29.9410068+03:00 0HLH6167QME55:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]" (0723d8ff)
+2018-09-29T15:46:29.9455793+03:00 0HLH6167QME55:00000002 [INF] Executed action method "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 39.6979ms. (50a9e262)
+2018-09-29T15:46:29.9472368+03:00 0HLH6167QME55:00000002 [INF] Executing ViewResult, running view "Edit". (c83d0e25)
+2018-09-29T15:46:30.0347310+03:00 0HLH6167QME55:00000002 [INF] Executed ViewResult - view "Edit" executed in 89.0142ms. (f66409e9)
+2018-09-29T15:46:30.0348734+03:00 0HLH6167QME55:00000002 [INF] Executed action "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" in 148.0092ms (afa2e885)
+2018-09-29T15:46:30.0352570+03:00 0HLH6167QME55:00000002 [INF] Request finished in 160.3868ms 200 text/html; charset=utf-8 (791a596a)
+2018-09-29T15:46:57.6367360+03:00  [INF] Application folder:D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\wwwroot (a1738332)
+2018-09-29T15:46:57.6452832+03:00  [INF] Configuration value of M:30 (b5078418)
+2018-09-29T15:46:57.6482473+03:00  [INF] Connection string:Server=(local);Database=Northwind;Trusted_Connection=True; (66ad781e)
+2018-09-29T15:46:58.3261427+03:00 0HLH616IDS6A0:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44323/   (ca22a1cb)
+2018-09-29T15:46:58.3261427+03:00 0HLH616IDS6A1:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:33178/  0 (ca22a1cb)
+2018-09-29T15:46:58.3621590+03:00 0HLH616IDS6A1:00000001 [INF] Request finished in 40.9172ms 200  (791a596a)
+2018-09-29T15:46:58.4951838+03:00 0HLH616IDS6A0:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:46:58.5738289+03:00 0HLH616IDS6A0:00000001 [INF] Executing action method "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)" - Validation state: Valid (dad538d7)
+2018-09-29T15:46:58.5790826+03:00 0HLH616IDS6A0:00000001 [INF] Executed action method "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.5195ms. (50a9e262)
+2018-09-29T15:46:58.6025911+03:00 0HLH616IDS6A0:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2018-09-29T15:46:58.6917583+03:00 0HLH616IDS6A0:00000001 [INF] Executed ViewResult - view "Index" executed in 102.8214ms. (f66409e9)
+2018-09-29T15:46:58.6944790+03:00 0HLH616IDS6A0:00000001 [INF] Executed action "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)" in 196.6816ms (afa2e885)
+2018-09-29T15:46:58.7044810+03:00 0HLH616IDS6A0:00000001 [INF] Request finished in 385.0767ms 200 text/html; charset=utf-8 (791a596a)
+2018-09-29T15:47:01.1259121+03:00 0HLH616IDS6A1:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44323/Products   (ca22a1cb)
+2018-09-29T15:47:01.1292032+03:00 0HLH616IDS6A1:00000002 [INF] Route matched with "{action = \"Index\", controller = \"Products\"}". Executing action "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:47:01.3734777+03:00 0HLH616IDS6A1:00000002 [INF] Executing action method "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)" - Validation state: Valid (dad538d7)
+2018-09-29T15:47:01.6220194+03:00 0HLH616IDS6A1:00000002 [INF] Entity Framework Core "2.1.3-rtm-32065" initialized '"NorthwindContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-09-29T15:47:01.6262395+03:00 0HLH616IDS6A1:00000002 [INF] Executed action method "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 250.8751ms. (50a9e262)
+2018-09-29T15:47:01.6397182+03:00 0HLH616IDS6A1:00000002 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2018-09-29T15:47:01.9535350+03:00 0HLH616IDS6A1:00000002 [INF] Executed DbCommand ("72"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [prod].[ProductID], [prod].[CategoryID], [prod].[Discontinued], [prod].[ProductName], [prod].[QuantityPerUnit], [prod].[ReorderLevel], [prod].[SupplierID], [prod].[UnitPrice], [prod].[UnitsInStock], [prod].[UnitsOnOrder], [prod.Supplier].[SupplierID], [prod.Supplier].[Address], [prod.Supplier].[City], [prod.Supplier].[CompanyName], [prod.Supplier].[ContactName], [prod.Supplier].[ContactTitle], [prod.Supplier].[Country], [prod.Supplier].[Fax], [prod.Supplier].[HomePage], [prod.Supplier].[Phone], [prod.Supplier].[PostalCode], [prod.Supplier].[Region], [prod.Category].[CategoryID], [prod.Category].[CategoryName], [prod.Category].[Description], [prod.Category].[Picture]
+FROM [Products] AS [prod]
+LEFT JOIN [Suppliers] AS [prod.Supplier] ON [prod].[SupplierID] = [prod.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [prod.Category] ON [prod].[CategoryID] = [prod.Category].[CategoryID]" (0723d8ff)
+2018-09-29T15:47:02.0616992+03:00 0HLH616IDS6A1:00000002 [INF] Executed ViewResult - view "Index" executed in 432.7695ms. (f66409e9)
+2018-09-29T15:47:02.0636964+03:00 0HLH616IDS6A1:00000002 [INF] Executed action "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)" in 932.5918ms (afa2e885)
+2018-09-29T15:47:02.0665295+03:00 0HLH616IDS6A1:00000002 [INF] Request finished in 940.556ms 200 text/html; charset=utf-8 (791a596a)
+2018-09-29T15:47:04.1953304+03:00 0HLH616IDS6A0:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44323/Products/Edit/3   (ca22a1cb)
+2018-09-29T15:47:04.2175955+03:00 0HLH616IDS6A0:00000002 [INF] Route matched with "{action = \"Edit\", controller = \"Products\"}". Executing action "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:47:04.2548692+03:00 0HLH616IDS6A0:00000002 [INF] Executing action method "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" with arguments (["3"]) - Validation state: Valid (4e3479ed)
+2018-09-29T15:47:04.2584727+03:00 0HLH616IDS6A0:00000002 [INF] Entity Framework Core "2.1.3-rtm-32065" initialized '"NorthwindContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-09-29T15:47:04.3069066+03:00 0HLH616IDS6A0:00000002 [INF] Executed DbCommand ("28"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[ProductID], [e].[CategoryID], [e].[Discontinued], [e].[ProductName], [e].[QuantityPerUnit], [e].[ReorderLevel], [e].[SupplierID], [e].[UnitPrice], [e].[UnitsInStock], [e].[UnitsOnOrder]
+FROM [Products] AS [e]
+WHERE [e].[ProductID] = @__get_Item_0" (0723d8ff)
+2018-09-29T15:47:04.3372146+03:00 0HLH616IDS6A0:00000002 [INF] Executed DbCommand ("20"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]" (0723d8ff)
+2018-09-29T15:47:04.3674671+03:00 0HLH616IDS6A0:00000002 [INF] Executed DbCommand ("19"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]" (0723d8ff)
+2018-09-29T15:47:04.3733175+03:00 0HLH616IDS6A0:00000002 [INF] Executed action method "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 116.3161ms. (50a9e262)
+2018-09-29T15:47:04.3800369+03:00 0HLH616IDS6A0:00000002 [INF] Executing ViewResult, running view "Edit". (c83d0e25)
+2018-09-29T15:47:04.4700292+03:00 0HLH616IDS6A0:00000002 [INF] Executed ViewResult - view "Edit" executed in 94.8737ms. (f66409e9)
+2018-09-29T15:47:04.4717740+03:00 0HLH616IDS6A0:00000002 [INF] Executed action "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" in 252.4896ms (afa2e885)
+2018-09-29T15:47:04.4737460+03:00 0HLH616IDS6A0:00000002 [INF] Request finished in 281.5434ms 200 text/html; charset=utf-8 (791a596a)
+2018-09-29T15:47:15.3482355+03:00 0HLH616IDS6A1:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44323/Products/Edit/3000000   (ca22a1cb)
+2018-09-29T15:47:15.3500828+03:00 0HLH616IDS6A1:00000003 [INF] Route matched with "{action = \"Edit\", controller = \"Products\"}". Executing action "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:47:15.3668823+03:00 0HLH616IDS6A1:00000003 [INF] Executing action method "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" with arguments (["3000000"]) - Validation state: Valid (4e3479ed)
+2018-09-29T15:47:15.3692714+03:00 0HLH616IDS6A1:00000003 [INF] Entity Framework Core "2.1.3-rtm-32065" initialized '"NorthwindContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-09-29T15:47:15.3940201+03:00 0HLH616IDS6A1:00000003 [INF] Executed DbCommand ("20"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[ProductID], [e].[CategoryID], [e].[Discontinued], [e].[ProductName], [e].[QuantityPerUnit], [e].[ReorderLevel], [e].[SupplierID], [e].[UnitPrice], [e].[UnitsInStock], [e].[UnitsOnOrder]
+FROM [Products] AS [e]
+WHERE [e].[ProductID] = @__get_Item_0" (0723d8ff)
+2018-09-29T15:47:15.3964731+03:00 0HLH616IDS6A1:00000003 [INF] Executed action method "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 27.5274ms. (50a9e262)
+2018-09-29T15:47:15.4016836+03:00 0HLH616IDS6A1:00000003 [INF] Executing ViewResult, running view "Create". (c83d0e25)
+2018-09-29T15:47:15.7218019+03:00 0HLH616IDS6A1:00000003 [INF] Executed action "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" in 370.0361ms (afa2e885)
+2018-09-29T15:47:15.8403174+03:00 0HLH616IDS6A1:00000003 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Products_Create.<ExecuteAsync>b__17_0() in D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\Views\Products\Create.cshtml:line 14
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCore.Views_Products_Create.ExecuteAsync() in D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\Views\Products\Create.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-29T15:47:15.8707982+03:00 0HLH616IDS6A1:00000003 [INF] Request finished in 522.6429ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-29T15:49:06.3679323+03:00  [INF] Application folder:D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\wwwroot (a1738332)
+2018-09-29T15:49:06.3766924+03:00  [INF] Configuration value of M:30 (b5078418)
+2018-09-29T15:49:06.3782152+03:00  [INF] Connection string:Server=(local);Database=Northwind;Trusted_Connection=True; (66ad781e)
+2018-09-29T15:49:06.7056084+03:00 0HLH617OMAA8O:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44323/   (ca22a1cb)
+2018-09-29T15:49:06.7056084+03:00 0HLH617OMAA8P:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:33178/  0 (ca22a1cb)
+2018-09-29T15:49:06.7444846+03:00 0HLH617OMAA8P:00000001 [INF] Request finished in 40.8821ms 200  (791a596a)
+2018-09-29T15:49:27.2125924+03:00 0HLH617OMAA8O:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:49:27.2797968+03:00 0HLH617OMAA8O:00000001 [INF] Executing action method "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)" - Validation state: Valid (dad538d7)
+2018-09-29T15:49:27.2854712+03:00 0HLH617OMAA8O:00000001 [INF] Executed action method "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.4308ms. (50a9e262)
+2018-09-29T15:49:27.3155971+03:00 0HLH617OMAA8O:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2018-09-29T15:49:27.3993520+03:00 0HLH617OMAA8O:00000001 [INF] Executed ViewResult - view "Index" executed in 104.9427ms. (f66409e9)
+2018-09-29T15:49:27.4019156+03:00 0HLH617OMAA8O:00000001 [INF] Executed action "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)" in 186.9798ms (afa2e885)
+2018-09-29T15:49:27.4189368+03:00 0HLH617OMAA8O:00000001 [INF] Request finished in 20718.0139ms 200 text/html; charset=utf-8 (791a596a)
+2018-09-29T15:49:29.4394952+03:00 0HLH617OMAA8P:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44323/Products   (ca22a1cb)
+2018-09-29T15:49:31.7348424+03:00 0HLH617OMAA8P:00000002 [INF] Route matched with "{action = \"Index\", controller = \"Products\"}". Executing action "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:49:31.8621599+03:00 0HLH617OMAA8P:00000002 [INF] Executing action method "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)" - Validation state: Valid (dad538d7)
+2018-09-29T15:49:32.1131878+03:00 0HLH617OMAA8P:00000002 [INF] Entity Framework Core "2.1.3-rtm-32065" initialized '"NorthwindContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-09-29T15:49:32.1173009+03:00 0HLH617OMAA8P:00000002 [INF] Executed action method "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 253.2083ms. (50a9e262)
+2018-09-29T15:49:32.1234723+03:00 0HLH617OMAA8P:00000002 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2018-09-29T15:49:32.3818280+03:00 0HLH617OMAA8P:00000002 [INF] Executed DbCommand ("59"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [prod].[ProductID], [prod].[CategoryID], [prod].[Discontinued], [prod].[ProductName], [prod].[QuantityPerUnit], [prod].[ReorderLevel], [prod].[SupplierID], [prod].[UnitPrice], [prod].[UnitsInStock], [prod].[UnitsOnOrder], [prod.Supplier].[SupplierID], [prod.Supplier].[Address], [prod.Supplier].[City], [prod.Supplier].[CompanyName], [prod.Supplier].[ContactName], [prod.Supplier].[ContactTitle], [prod.Supplier].[Country], [prod.Supplier].[Fax], [prod.Supplier].[HomePage], [prod.Supplier].[Phone], [prod.Supplier].[PostalCode], [prod.Supplier].[Region], [prod.Category].[CategoryID], [prod.Category].[CategoryName], [prod.Category].[Description], [prod.Category].[Picture]
+FROM [Products] AS [prod]
+LEFT JOIN [Suppliers] AS [prod.Supplier] ON [prod].[SupplierID] = [prod.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [prod.Category] ON [prod].[CategoryID] = [prod.Category].[CategoryID]" (0723d8ff)
+2018-09-29T15:49:32.4838057+03:00 0HLH617OMAA8P:00000002 [INF] Executed ViewResult - view "Index" executed in 364.3161ms. (f66409e9)
+2018-09-29T15:49:32.4853318+03:00 0HLH617OMAA8P:00000002 [INF] Executed action "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)" in 749.0584ms (afa2e885)
+2018-09-29T15:49:32.4877678+03:00 0HLH617OMAA8P:00000002 [INF] Request finished in 3048.4542ms 200 text/html; charset=utf-8 (791a596a)
+2018-09-29T15:49:37.1000990+03:00 0HLH617OMAA8O:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44323/Products/Edit/2   (ca22a1cb)
+2018-09-29T15:49:39.6751313+03:00 0HLH617OMAA8O:00000002 [INF] Route matched with "{action = \"Edit\", controller = \"Products\"}". Executing action "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:49:39.7141385+03:00 0HLH617OMAA8O:00000002 [INF] Executing action method "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" with arguments (["2"]) - Validation state: Valid (4e3479ed)
+2018-09-29T15:49:39.7175093+03:00 0HLH617OMAA8O:00000002 [INF] Entity Framework Core "2.1.3-rtm-32065" initialized '"NorthwindContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-09-29T15:49:39.7661693+03:00 0HLH617OMAA8O:00000002 [INF] Executed DbCommand ("33"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[ProductID], [e].[CategoryID], [e].[Discontinued], [e].[ProductName], [e].[QuantityPerUnit], [e].[ReorderLevel], [e].[SupplierID], [e].[UnitPrice], [e].[UnitsInStock], [e].[UnitsOnOrder]
+FROM [Products] AS [e]
+WHERE [e].[ProductID] = @__get_Item_0" (0723d8ff)
+2018-09-29T15:49:39.7964064+03:00 0HLH617OMAA8O:00000002 [INF] Executed DbCommand ("21"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]" (0723d8ff)
+2018-09-29T15:49:39.8233180+03:00 0HLH617OMAA8O:00000002 [INF] Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]" (0723d8ff)
+2018-09-29T15:49:39.8291194+03:00 0HLH617OMAA8O:00000002 [INF] Executed action method "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 113.0503ms. (50a9e262)
+2018-09-29T15:49:39.8334227+03:00 0HLH617OMAA8O:00000002 [INF] Executing ViewResult, running view "Edit". (c83d0e25)
+2018-09-29T15:49:39.9199984+03:00 0HLH617OMAA8O:00000002 [INF] Executed ViewResult - view "Edit" executed in 88.7871ms. (f66409e9)
+2018-09-29T15:49:39.9220404+03:00 0HLH617OMAA8O:00000002 [INF] Executed action "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" in 244.9514ms (afa2e885)
+2018-09-29T15:49:39.9244766+03:00 0HLH617OMAA8O:00000002 [INF] Request finished in 2825.7483ms 200 text/html; charset=utf-8 (791a596a)
+2018-09-29T15:49:45.4135249+03:00 0HLH617OMAA8P:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44323/Products/Edit/20000000000000000000   (ca22a1cb)
+2018-09-29T15:49:49.7384765+03:00 0HLH617OMAA8P:00000003 [INF] Route matched with "{action = \"Edit\", controller = \"Products\"}". Executing action "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:49:49.7628966+03:00 0HLH617OMAA8P:00000003 [INF] Executing action method "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" with arguments (["0"]) - Validation state: Invalid (4e3479ed)
+2018-09-29T15:49:49.7653277+03:00 0HLH617OMAA8P:00000003 [INF] Entity Framework Core "2.1.3-rtm-32065" initialized '"NorthwindContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-09-29T15:49:49.7900287+03:00 0HLH617OMAA8P:00000003 [INF] Executed DbCommand ("21"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[ProductID], [e].[CategoryID], [e].[Discontinued], [e].[ProductName], [e].[QuantityPerUnit], [e].[ReorderLevel], [e].[SupplierID], [e].[UnitPrice], [e].[UnitsInStock], [e].[UnitsOnOrder]
+FROM [Products] AS [e]
+WHERE [e].[ProductID] = @__get_Item_0" (0723d8ff)
+2018-09-29T15:49:49.7915893+03:00 0HLH617OMAA8P:00000003 [INF] Executed action method "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 27.3342ms. (50a9e262)
+2018-09-29T15:49:49.7961792+03:00 0HLH617OMAA8P:00000003 [INF] Executing ViewResult, running view "Create". (c83d0e25)
+2018-09-29T15:49:49.9614406+03:00 0HLH617OMAA8P:00000003 [INF] Executed action "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" in 221.2979ms (afa2e885)
+2018-09-29T15:49:52.7758909+03:00 0HLH617OMAA8P:00000003 [ERR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Products_Create.<ExecuteAsync>b__17_0() in D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\Views\Products\Create.cshtml:line 14
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCore.Views_Products_Create.ExecuteAsync() in D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\Views\Products\Create.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at AspNetCore.Homework.Startup.<>c__DisplayClass6_0.<<Configure>b__2>d.MoveNext() in D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\Startup.cs:line 85 (0e08648f)
+2018-09-29T15:49:53.7857512+03:00 0HLH617OMAA8P:00000003 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Products_Create.<ExecuteAsync>b__17_0() in D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\Views\Products\Create.cshtml:line 14
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCore.Views_Products_Create.ExecuteAsync() in D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\Views\Products\Create.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at AspNetCore.Homework.Startup.<>c__DisplayClass6_0.<<Configure>b__2>d.MoveNext() in D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\Startup.cs:line 85
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-29T15:51:30.5984936+03:00  [INF] Application folder:D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\wwwroot (a1738332)
+2018-09-29T15:51:30.6040761+03:00  [INF] Configuration value of M:30 (b5078418)
+2018-09-29T15:51:30.6041734+03:00  [INF] Connection string:Server=(local);Database=Northwind;Trusted_Connection=True; (66ad781e)
+2018-09-29T15:51:30.9812980+03:00 0HLH6193LOAMN:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44323/   (ca22a1cb)
+2018-09-29T15:51:31.0761989+03:00 0HLH6193LOAMN:00000001 [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:51:31.0880040+03:00 0HLH6193LOAMN:00000001 [INF] Executing action method "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)" - Validation state: Valid (dad538d7)
+2018-09-29T15:51:31.0924428+03:00 0HLH6193LOAMN:00000001 [INF] Executed action method "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.7505ms. (50a9e262)
+2018-09-29T15:51:31.1156955+03:00 0HLH6193LOAMN:00000001 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2018-09-29T15:51:31.2240471+03:00 0HLH6193LOAMN:00000001 [INF] Executed ViewResult - view "Index" executed in 121.9919ms. (f66409e9)
+2018-09-29T15:51:31.2243515+03:00 0HLH6193LOAMN:00000001 [INF] Executed action "AspNetCore.Homework.Controllers.HomeController.Index (AspNetCore.Homework)" in 147.9083ms (afa2e885)
+2018-09-29T15:51:31.2336865+03:00 0HLH6193LOAMN:00000001 [INF] Request finished in 256.4482ms 200 text/html; charset=utf-8 (791a596a)
+2018-09-29T15:51:33.7278063+03:00 0HLH6193LOAMN:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44323/Products   (ca22a1cb)
+2018-09-29T15:51:33.7296824+03:00 0HLH6193LOAMN:00000002 [INF] Route matched with "{action = \"Index\", controller = \"Products\"}". Executing action "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:51:33.7958190+03:00 0HLH6193LOAMN:00000002 [INF] Executing action method "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)" - Validation state: Valid (dad538d7)
+2018-09-29T15:51:34.0526073+03:00 0HLH6193LOAMN:00000002 [INF] Entity Framework Core "2.1.3-rtm-32065" initialized '"NorthwindContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-09-29T15:51:34.0547762+03:00 0HLH6193LOAMN:00000002 [INF] Executed action method "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 258.7922ms. (50a9e262)
+2018-09-29T15:51:34.0570154+03:00 0HLH6193LOAMN:00000002 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2018-09-29T15:51:34.2326724+03:00 0HLH6193LOAMN:00000002 [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [prod].[ProductID], [prod].[CategoryID], [prod].[Discontinued], [prod].[ProductName], [prod].[QuantityPerUnit], [prod].[ReorderLevel], [prod].[SupplierID], [prod].[UnitPrice], [prod].[UnitsInStock], [prod].[UnitsOnOrder], [prod.Supplier].[SupplierID], [prod.Supplier].[Address], [prod.Supplier].[City], [prod.Supplier].[CompanyName], [prod.Supplier].[ContactName], [prod.Supplier].[ContactTitle], [prod.Supplier].[Country], [prod.Supplier].[Fax], [prod.Supplier].[HomePage], [prod.Supplier].[Phone], [prod.Supplier].[PostalCode], [prod.Supplier].[Region], [prod.Category].[CategoryID], [prod.Category].[CategoryName], [prod.Category].[Description], [prod.Category].[Picture]
+FROM [Products] AS [prod]
+LEFT JOIN [Suppliers] AS [prod.Supplier] ON [prod].[SupplierID] = [prod.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [prod.Category] ON [prod].[CategoryID] = [prod.Category].[CategoryID]" (0723d8ff)
+2018-09-29T15:51:34.3214896+03:00 0HLH6193LOAMN:00000002 [INF] Executed ViewResult - view "Index" executed in 266.4163ms. (f66409e9)
+2018-09-29T15:51:34.3216197+03:00 0HLH6193LOAMN:00000002 [INF] Executed action "AspNetCore.Homework.Controllers.ProductsController.Index (AspNetCore.Homework)" in 591.8763ms (afa2e885)
+2018-09-29T15:51:34.3222233+03:00 0HLH6193LOAMN:00000002 [INF] Request finished in 594.4051ms 200 text/html; charset=utf-8 (791a596a)
+2018-09-29T15:51:35.8549306+03:00 0HLH6193LOAMN:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44323/Products/Edit/5   (ca22a1cb)
+2018-09-29T15:51:35.8663796+03:00 0HLH6193LOAMN:00000003 [INF] Route matched with "{action = \"Edit\", controller = \"Products\"}". Executing action "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:51:35.9025950+03:00 0HLH6193LOAMN:00000003 [INF] Executing action method "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" with arguments (["5"]) - Validation state: Valid (4e3479ed)
+2018-09-29T15:51:35.9044347+03:00 0HLH6193LOAMN:00000003 [INF] Entity Framework Core "2.1.3-rtm-32065" initialized '"NorthwindContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-09-29T15:51:35.9315196+03:00 0HLH6193LOAMN:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[ProductID], [e].[CategoryID], [e].[Discontinued], [e].[ProductName], [e].[QuantityPerUnit], [e].[ReorderLevel], [e].[SupplierID], [e].[UnitPrice], [e].[UnitsInStock], [e].[UnitsOnOrder]
+FROM [Products] AS [e]
+WHERE [e].[ProductID] = @__get_Item_0" (0723d8ff)
+2018-09-29T15:51:35.9444824+03:00 0HLH6193LOAMN:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]" (0723d8ff)
+2018-09-29T15:51:35.9524326+03:00 0HLH6193LOAMN:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]" (0723d8ff)
+2018-09-29T15:51:35.9563699+03:00 0HLH6193LOAMN:00000003 [INF] Executed action method "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 53.7001ms. (50a9e262)
+2018-09-29T15:51:35.9580574+03:00 0HLH6193LOAMN:00000003 [INF] Executing ViewResult, running view "Edit". (c83d0e25)
+2018-09-29T15:51:36.0353795+03:00 0HLH6193LOAMN:00000003 [INF] Executed ViewResult - view "Edit" executed in 78.895ms. (f66409e9)
+2018-09-29T15:51:36.0354658+03:00 0HLH6193LOAMN:00000003 [INF] Executed action "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" in 169.0304ms (afa2e885)
+2018-09-29T15:51:36.0356313+03:00 0HLH6193LOAMN:00000003 [INF] Request finished in 180.7553ms 200 text/html; charset=utf-8 (791a596a)
+2018-09-29T15:51:40.3961508+03:00 0HLH6193LOAMN:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44323/Products/Edit/500000000000000   (ca22a1cb)
+2018-09-29T15:51:40.3965495+03:00 0HLH6193LOAMN:00000004 [INF] Route matched with "{action = \"Edit\", controller = \"Products\"}". Executing action "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" (a44c0341)
+2018-09-29T15:51:40.3984698+03:00 0HLH6193LOAMN:00000004 [INF] Executing action method "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" with arguments (["0"]) - Validation state: Invalid (4e3479ed)
+2018-09-29T15:51:40.3989362+03:00 0HLH6193LOAMN:00000004 [INF] Entity Framework Core "2.1.3-rtm-32065" initialized '"NorthwindContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-09-29T15:51:40.4006717+03:00 0HLH6193LOAMN:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[ProductID], [e].[CategoryID], [e].[Discontinued], [e].[ProductName], [e].[QuantityPerUnit], [e].[ReorderLevel], [e].[SupplierID], [e].[UnitPrice], [e].[UnitsInStock], [e].[UnitsOnOrder]
+FROM [Products] AS [e]
+WHERE [e].[ProductID] = @__get_Item_0" (0723d8ff)
+2018-09-29T15:51:40.4008327+03:00 0HLH6193LOAMN:00000004 [INF] Executed action method "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 2.2838ms. (50a9e262)
+2018-09-29T15:51:40.4029426+03:00 0HLH6193LOAMN:00000004 [INF] Executing ViewResult, running view "Create". (c83d0e25)
+2018-09-29T15:51:40.4231398+03:00 0HLH6193LOAMN:00000004 [INF] Executed action "AspNetCore.Homework.Controllers.ProductsController.Edit (AspNetCore.Homework)" in 26.4542ms (afa2e885)
+2018-09-29T15:51:40.4485373+03:00 0HLH6193LOAMN:00000004 [ERR] Custom error handler cought exceptionSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Products_Create.<ExecuteAsync>b__17_0() in D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\Views\Products\Create.cshtml:line 14
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCore.Views_Products_Create.ExecuteAsync() in D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\Views\Products\Create.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at AspNetCore.Homework.Startup.<>c__DisplayClass6_0.<<Configure>b__2>d.MoveNext() in D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\Startup.cs:line 85 (8b292e42)
+2018-09-29T15:51:40.4521108+03:00 0HLH6193LOAMN:00000004 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Products_Create.<ExecuteAsync>b__17_0() in D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\Views\Products\Create.cshtml:line 14
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCore.Views_Products_Create.ExecuteAsync() in D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\Views\Products\Create.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at AspNetCore.Homework.Startup.<>c__DisplayClass6_0.<<Configure>b__2>d.MoveNext() in D:\GitHub\AspNetCore.Homework\AspNetCore.Homework\Startup.cs:line 85
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-29T15:51:40.4791302+03:00 0HLH6193LOAMN:00000004 [INF] Request finished in 82.9967ms 500 text/html; charset=utf-8 (791a596a)

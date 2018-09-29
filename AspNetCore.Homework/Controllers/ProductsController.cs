@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Diagnostics;
+using System.Linq;
 using AspNetCore.Homework.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -20,10 +21,8 @@ namespace AspNetCore.Homework.Controllers
 
         public IActionResult Index()
         {
-            var max = config.GetSection("M")?.Value;
-
-            return View(max != null
-                ? uow.ProductsRepository.GetAll().Take(int.Parse(max))
+            return View(int.TryParse(config.GetSection("M")?.Value, out int max)
+                ? uow.ProductsRepository.GetAll().Take(max)
                 : uow.ProductsRepository.GetAll());
         }
 
@@ -143,5 +142,8 @@ namespace AspNetCore.Homework.Controllers
 
             return View(viewModel);
         }
+
     }
+
+
 }
