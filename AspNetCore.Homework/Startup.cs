@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -59,9 +61,7 @@ namespace AspNetCore.Homework
                 $"Configuration value of M:{(int.TryParse(Configuration.GetSection("M")?.Value, out int max) ? max : -1)}");
 
             logger.LogInformation($"Connection string:{Configuration.GetConnectionString("DefaultConnection")}");
-
-          
-
+         
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -76,21 +76,40 @@ namespace AspNetCore.Homework
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.Use(next =>
-            {
-                return async context =>
+            app.UseExceptionHandler(
+                options =>
                 {
-                    try
-                    {
-                        await next(context);
-                    }
-                    catch (Exception e)
-                    {
-                        logger.LogError("Custom error handler cought exception"+e.ToString());
-                        throw;
-                    }
-                };
-            });
+                    options.Run(
+                        async context =>
+                        {
+                            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                            context.Response.ContentType = "text/html";
+                            var ex = context.Features.Get<IExceptionHandlerFeature>();
+                            if (ex != null)
+                            {
+                                logger.LogError("Custom error handler caught exception:" + ex.ToString());
+                                var err = $"<h1>Error: {ex.Error.Message}</h1>{ex.Error.StackTrace}";
+                                await context.Response.WriteAsync(err).ConfigureAwait(false);
+                            }
+                        });
+                }
+            );
+
+            //app.Use(next =>
+            //{
+            //    return async context =>
+            //    {
+            //        try
+            //        {
+            //            await next(context);
+            //        }
+            //        catch (Exception e)
+            //        {
+            //            logger.LogError("Custom error handler cought exception"+e.ToString());
+            //            throw;
+            //        }
+            //    };
+            //});
 
             app.UseMvc(routes =>
             {
