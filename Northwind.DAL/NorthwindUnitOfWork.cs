@@ -11,7 +11,7 @@ namespace Northwind.DAL
         private IRepository<Categories> categoriesRepository;
         private bool disposed;
         private IRepository<Products> productsRepository;
-        private SuppliersRepository suppliersRepository;
+        private IRepository<Suppliers> suppliersRepository;
 
         public NorthwindUnitOfWork(NorthwindContext context)
         {
