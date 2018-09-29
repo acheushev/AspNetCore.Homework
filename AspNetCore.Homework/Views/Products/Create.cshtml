@@ -1,0 +1,52 @@
+﻿@model ProductViewModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="ProductName"></label>
+        <input asp-for="ProductName" value="@Model.ProductName" />
+        <span asp-validation-for="ProductName"></span>
+    </div>
+    <div>
+        <label asp-for="Discontinued"></label>
+        <input type="checkbox" asp-for="Discontinued" checked="@Model.Discontinued" />
+        <span asp-validation-for="Discontinued"></span>
+    </div>
+    <div>
+        <label asp-for="QuantityPerUnit"></label>
+        <input asp-for="QuantityPerUnit" value="@Model.QuantityPerUnit" />
+        <span asp-validation-for="QuantityPerUnit"></span>
+    </div>
+    <div>
+        <label asp-for="ReorderLevel"></label>
+        <input asp-for="ReorderLevel" value="@Model.ReorderLevel" />
+        <span asp-validation-for="ReorderLevel"></span>
+    </div>
+    <div>
+        <label asp-for="UnitPrice"></label>
+        <input asp-for="UnitPrice" value="@Model.UnitPrice" />
+        <span asp-validation-for="UnitPrice"></span>
+    </div>
+    <div>
+        <label asp-for="UnitsOnOrder"></label>
+        <input asp-for="UnitsOnOrder" value="@Model.UnitsOnOrder" />
+        <span asp-validation-for="UnitsOnOrder"></span>
+    </div>
+
+    <select asp-for="CategoryId"
+            asp-items="@(new SelectList(Model.AllCategories,"Id","Name"))">
+    </select>
+    
+    <select asp-for="SupplierId"
+            asp-items="@(new SelectList(Model.AllSuppliers,"SupplierId","SupplierName"))">
+    </select>
+
+    <input type="submit" name="save" value="Create" />
+    
+</form>
+
