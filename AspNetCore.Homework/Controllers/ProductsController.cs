@@ -52,7 +52,7 @@ namespace AspNetCore.Homework.Controllers
                         {SupplierId = sup.SupplierId, SupplierName = sup.CompanyName}).ToList()
                 });
 
-            return View("Create");
+            return RedirectToAction("Create");
         }
 
         [HttpPost]
