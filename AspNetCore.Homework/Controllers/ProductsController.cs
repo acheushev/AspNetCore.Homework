@@ -129,7 +129,7 @@ namespace AspNetCore.Homework.Controllers
                      OrderDetails = viewModel.OrderDetails*/
                 };
 
-                uow.ProductsRepository.Update(product);
+                uow.ProductsRepository.Create(product);
                 uow.Commit();
 
                 return RedirectToAction("Index");
