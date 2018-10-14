@@ -8,6 +8,7 @@ using Northwind.DAL.Interfaces;
 
 namespace AspNetCore.Homework.Controllers
 {
+    [SampleActionFilter(true)]
     public class CategoriesController : Controller
     {
         private readonly IUnitOfWork uow;
