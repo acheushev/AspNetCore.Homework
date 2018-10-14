@@ -329,3 +329,4 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 /AspNetCore.Homework/Logs
+/AspNetCore.Homework/wwwroot/storage

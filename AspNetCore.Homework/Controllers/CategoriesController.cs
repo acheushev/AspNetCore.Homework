@@ -54,8 +54,6 @@ namespace AspNetCore.Homework.Controllers
                         uow.Commit();
                     }
                 }
-
-                return RedirectToAction("Index");
             }
 
             return RedirectToAction("Index");

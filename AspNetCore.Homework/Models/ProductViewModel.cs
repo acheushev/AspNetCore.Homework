@@ -34,9 +34,9 @@ namespace AspNetCore.Homework.Models
 
         public bool Discontinued { get; set; }
 
-        /*  public Categories Category { get; set; }
-        public Suppliers Supplier { get; set; }
-        public ICollection<OrderDetails> OrderDetails { get; set; }*/
+        /*  public Categories Category { Get; set; }
+        public Suppliers Supplier { Get; set; }
+        public ICollection<OrderDetails> OrderDetails { Get; set; }*/
         public List<SupplierViewModel> AllSuppliers { get; set; }
         public List<CategoryViewModel> AllCategories { get; set; }
     }

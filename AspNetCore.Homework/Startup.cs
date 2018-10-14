@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -29,7 +30,7 @@ namespace AspNetCore.Homework
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // This method gets called by the runtime. Use this method to Add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<CookiePolicyOptions>(options =>
@@ -95,22 +96,8 @@ namespace AspNetCore.Homework
                 }
             );
 
-            //app.Use(next =>
-            //{
-            //    return async context =>
-            //    {
-            //        try
-            //        {
-            //            await next(context);
-            //        }
-            //        catch (Exception e)
-            //        {
-            //            logger.LogError("Custom error handler cought exception"+e.ToString());
-            //            throw;
-            //        }
-            //    };
-            //});
-
+            app.UseMiddleware<FileCacheMiddleware>(Path.Combine(env.WebRootPath, "storage"), 5);
+          
             app.UseMvc(routes =>
             {
                 routes.MapRoute("images", "images/{ids}",
