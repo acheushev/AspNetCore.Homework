@@ -24,7 +24,7 @@ namespace AspNetCore.Homework
         public async Task Invoke(HttpContext context)
         {
             var path = context.Request.Path;
-            if (path.Value.Contains("GetCategoryImageById/"))
+            if (path.Value.Contains("GetCategoryImageById/")|| path.Value.Contains("images/"))
             {
                 var id = int.Parse(path.Value.Split('/').Last());
                 var image = cache.Get(id);

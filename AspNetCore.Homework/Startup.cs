@@ -96,7 +96,9 @@ namespace AspNetCore.Homework
                 }
             );
 
-            app.UseMiddleware<FileCacheMiddleware>(Path.Combine(env.WebRootPath, "storage"), 5);
+            app.UseMiddleware<FileCacheMiddleware>(
+                Path.Combine(env.WebRootPath, Configuration.GetSection("StorageFolder")?.Value),
+                int.TryParse(Configuration.GetSection("StorageCapacity")?.Value, out int capacity) ? capacity : 3);
           
             app.UseMvc(routes =>
             {
