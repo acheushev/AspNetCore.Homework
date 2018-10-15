@@ -11,13 +11,35 @@
         <th>Category Id</th>
         <th>Category Name</th>
         <th>Description</th>
+        <th>Picture</th>
+        <th>Upload New Picture</th>
     </tr>
         foreach (var cat in Model)
         {
             <tr>
                 <td>@cat.CategoryId</td>
                 <td>@cat.CategoryName</td>
-                <td>@cat.Description</td>                
+                <td>@cat.Description</td>
+                <td>
+                    <a asp-controller="Categories"
+                       asp-action="GetCategoryImageById"
+                       asp-route-id="@cat.CategoryId">View Image</a>
+                </td>
+                <td>
+                    <form method="post" enctype="multipart/form-data" asp-controller="Categories" asp-action="Upload">
+                        <input type="hidden" name="categoryId" value="@cat.CategoryId" />
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input class="form-control" style="height: auto" type="file" name="file" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input class="btn btn-default" type="submit" value="Upload" />
+                            </div>
+                        </div>
+                    </form>
+                </td>
             </tr>
         }
     }
