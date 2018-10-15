@@ -100,7 +100,7 @@ namespace AspNetCore.Homework
           
             app.UseMvc(routes =>
             {
-                routes.MapRoute("images", "images/{ids}",
+                routes.MapRoute("images", "images/{id}",
                     defaults: new { controller = "Categories", action = "GetCategoryImageById" });
                 routes.MapRoute(
                     name: "default",

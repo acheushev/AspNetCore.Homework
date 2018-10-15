@@ -10,7 +10,6 @@ namespace AspNetCore.Homework
 {
     public class SampleActionFilterAttribute : TypeFilterAttribute
     {
-        private bool on;
         public SampleActionFilterAttribute(bool on=false):base(typeof(SampleActionFilterImpl))
         {
             Arguments = new object[] {on};
