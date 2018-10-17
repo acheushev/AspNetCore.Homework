@@ -18,10 +18,19 @@ namespace AspNetCore.Homework
             this.capacity = capacity;
             this.storagePath = storagePath;
 
-            if(Directory.Exists(storagePath))
-                Directory.Delete(storagePath,true);
-
-            Directory.CreateDirectory(storagePath);
+            if (!Directory.Exists(storagePath))
+                Directory.CreateDirectory(storagePath);
+           
+            foreach (var filePath in Directory.GetFiles(storagePath))
+            {
+                var file = new FileInfo(filePath);
+                var key = int.Parse(file.Name);
+                var cacheItem =
+                    new LRUCacheItem<int, string>(key, filePath);
+                var node = new LinkedListNode<LRUCacheItem<int, string>>(cacheItem);
+                lruList.AddLast(node);
+                cacheMap.Add(key, node);
+            }           
         }
 
         [MethodImpl(MethodImplOptions.Synchronized)]
