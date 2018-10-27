@@ -7,13 +7,13 @@
 <h2>Categories</h2>
 <table class="table-bordered">
     @{
-    <tr>
-        <th>Category Id</th>
-        <th>Category Name</th>
-        <th>Description</th>
-        <th>Picture</th>
-        <th>Upload New Picture</th>
-    </tr>
+        <tr>
+            <th>Category Id</th>
+            <th>Category Name</th>
+            <th>Description</th>
+            <th>Picture</th>
+            <th>Upload New Picture</th>
+        </tr>
         foreach (var cat in Model)
         {
             <tr>
@@ -44,3 +44,9 @@
         }
     }
 </table>
+
+@section footer{ 
+    <hr />
+    <p>You cannot edit Category list</p>
+    <p>&copy; 2018 - AspNetCore.Homework</p>
+}
