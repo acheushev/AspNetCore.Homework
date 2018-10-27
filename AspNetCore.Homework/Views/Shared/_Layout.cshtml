@@ -48,11 +48,12 @@
     <partial name="_CookieConsentPartial" />
 
     <div class="container body-content">
+        @await Component.InvokeAsync("Breadcrumbs")
         @RenderBody()
         <hr />
         @if (IsSectionDefined("footer"))
         {
-            @RenderSection("footer",required:false)
+            @RenderSection("footer", required: false)
         }
         else
         {
