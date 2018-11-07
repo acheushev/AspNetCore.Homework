@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Test Api Page</title>
+</head>
+<body>
+
+    <table>
+        <tr >
+            <td valign="top">
+                <div>
+                    <h2>All Products</h2>
+                    <ul id="products" />
+                </div>
+            </td>
+            <td valign="top">
+                <div>
+                    <h2>All Categories</h2>
+                    <ul id="cats" />
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script>
+        var productUri = 'api/products';
+        var catUri = 'api/categories';
+
+        $(document).ready(function () {
+            // Send an AJAX request
+            $.getJSON(productUri)
+                .done(function (data) {
+                    // On success, 'data' contains a list of products.
+                    $.each(data, function (key, item) {
+                        // Add a list item for the product.
+                        $('<li>', { text: formatProductItem(item) }).appendTo($('#products'));
+                    });
+                });
+
+            $.getJSON(catUri)
+                .done(function (data) {
+                    // On success, 'data' contains a list of products.
+                    $.each(data, function (key, item) {
+                        // Add a list item for the product.
+                        $('<li>', { text: formatCatItem(item) }).appendTo($('#cats'));
+                    });
+                });
+        });
+        function formatProductItem(item) {
+            return item.productId + ': ' + item.productName;
+        }
+
+        function formatCatItem(item) {
+            return item.id + ': ' + item.name;
+        }
+
+    </script>
+
+
+</body>
+</html>
