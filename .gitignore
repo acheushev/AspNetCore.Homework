@@ -331,3 +331,4 @@ ASALocalRun/
 /AspNetCore.Homework/Logs
 /AspNetCore.Homework/wwwroot/storage
 /AspNetCore.Homework/wwwroot/cache
+/.vscode

@@ -4,13 +4,20 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+
+using AspNetCore.Homework.Data;
 using AspNetCore.Homework.Helpers;
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -47,7 +54,20 @@ namespace AspNetCore.Homework
                 builder => builder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")),
                 ServiceLifetime.Scoped);
 
+            services.AddDbContext<UserIdentityDbContext>(
+                builder => builder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")),
+                ServiceLifetime.Scoped);
+
             services.AddScoped<IUnitOfWork, NorthwindUnitOfWork>();
+
+            services.AddAuthentication(sharedOptions =>
+                {
+                    sharedOptions.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    sharedOptions.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+                })
+                .AddAzureAd(options => Configuration.Bind("AzureAd", options))
+                .AddCookie();
+
 
             var mappingConfig = new MapperConfiguration(mc =>
             {
@@ -58,7 +78,28 @@ namespace AspNetCore.Homework
             services.AddSingleton(mapper);
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                  // services.AddDefaultIdentity<IdentityUser>()
+                .AddEntityFrameworkStores<UserIdentityDbContext>()
+                .AddDefaultTokenProviders();
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddRazorPagesOptions(options =>
+                {
+                    options.AllowAreas = true;
+                    options.Conventions.AuthorizeAreaFolder("Identity", "/Account/Manage");
+                    options.Conventions.AuthorizeAreaPage("Identity", "/Account/Logout");
+                });
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = $"/Identity/Account/Login";
+                options.LogoutPath = $"/Identity/Account/Logout";
+                options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
+            });
+
+            services.AddSingleton<IEmailSender, EmailSender>();
+
 
             services.AddSwaggerGen(c =>
             {
@@ -121,10 +162,13 @@ namespace AspNetCore.Homework
                 }
             );
 
+
             app.UseMiddleware<FileCacheMiddleware>(
                 Path.Combine(env.WebRootPath, Configuration.GetSection("StorageFolder")?.Value),
                 int.TryParse(Configuration.GetSection("StorageCapacity")?.Value, out int capacity) ? capacity : 3);
-          
+
+            app.UseAuthentication();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute("images", "images/{id}",

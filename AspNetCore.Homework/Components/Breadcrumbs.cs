@@ -10,7 +10,7 @@ namespace AspNetCore.Homework.Components
             var controller = ViewContext.RouteData.Values["Controller"];
             var action = ViewContext.RouteData.Values["Action"];
 
-            if (controller.ToString().ToLower() == "home")
+            if (controller is null||controller.ToString().ToLower() == "home")
                 return View(model: (string)null);
             if (action.ToString().ToLower() == "index")
                 return View(model: $"Home --> {controller}");
