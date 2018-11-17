@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+
 using AspNetCore.Homework.Data;
 using AspNetCore.Homework.Helpers;
 using AutoMapper;
@@ -98,6 +99,7 @@ namespace AspNetCore.Homework
             });
 
             services.AddSingleton<IEmailSender, EmailSender>();
+
 
             services.AddSwaggerGen(c =>
             {
