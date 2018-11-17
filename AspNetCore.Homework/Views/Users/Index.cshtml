@@ -1,0 +1,27 @@
+﻿@model Microsoft.EntityFrameworkCore.DbSet<Microsoft.AspNetCore.Identity.IdentityUser>
+
+@{
+    ViewData["Title"] = "Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Users</h2>
+<table class="table-bordered">
+    @{
+        <tr>
+            <th>User Id</th>
+            <th>Email</th>
+            <th>Name</th>          
+        </tr>
+        foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Email</td>
+                <td>@user.UserName</td>
+              
+            </tr>
+        }
+    }
+</table>
+
