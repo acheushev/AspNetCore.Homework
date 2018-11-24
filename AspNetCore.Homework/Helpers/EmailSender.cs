@@ -24,6 +24,7 @@ namespace AspNetCore.Homework.Helpers
             {
                 From = new MailAddress("alex.cheushev@mail.ru")
             };
+
             mailMessage.To.Add(email);
             mailMessage.Body = htmlMessage;
             mailMessage.Subject = subject;
