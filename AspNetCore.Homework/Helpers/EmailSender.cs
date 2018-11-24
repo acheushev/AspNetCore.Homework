@@ -12,16 +12,18 @@ namespace AspNetCore.Homework.Helpers
     {
         public Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
-            SmtpClient client = new SmtpClient("smtp.gmail.com")
+            SmtpClient client = new SmtpClient("smtp.mail.ru")
             {
                 UseDefaultCredentials = false,
-                Credentials = new NetworkCredential("alexander.cheushev@gmail.com", "password"),
-                Port = 465,
+                Credentials = new NetworkCredential("alex.cheushev@mail.ru", "password"),
+                Port = 587,
                 EnableSsl = true
             };
 
-            MailMessage mailMessage = new MailMessage();
-            mailMessage.From = new MailAddress("alexander.cheushev@gmail.com");
+            MailMessage mailMessage = new MailMessage
+            {
+                From = new MailAddress("alex.cheushev@mail.ru")
+            };
             mailMessage.To.Add(email);
             mailMessage.Body = htmlMessage;
             mailMessage.Subject = subject;
